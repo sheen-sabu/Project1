@@ -90,5 +90,6 @@ def form_upload_view(request):
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponse("<h1>Success</h1>")
+            return HttpResponse("<h1>Success</h1> <!DOCTYPE html><html><body style='background-color:powderblue;'></body></html><p>-YOUR FILE HAS BEEN SUCCESFULLY UPLOADED </p><button type='button'>EXECUTE</button> ")
+
     return render(request, "upload/upload_file.html", {'form': form})
